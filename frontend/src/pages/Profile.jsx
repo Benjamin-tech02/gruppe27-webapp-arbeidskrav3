@@ -15,34 +15,34 @@ export default function Profile() {
   if (!medlem) return <div>Laster...</div>
 
   return (
-    <main className="p-6">
-      <div className="flex flex-col sm:flex-row gap-6 mb-6">
-        <img src={medlem.bilde} alt={medlem.navn} className="w-48 h-48 object-cover rounded" />
+    <main>
+      <div>
+        <img src={medlem.bilde} alt={medlem.navn} />
         <div>
-          <h2 className="text-2xl font-bold">{medlem.navn}</h2>
-          <p className="mt-2">{medlem.bio}</p>
-          <h3 className="font-semibold mt-4">Interesser</h3>
-          <ul className="list-disc list-inside">
+          <h2>{medlem.navn}</h2>
+          <p>{medlem.bio}</p>
+          <h3>Interesser</h3>
+          <ul>
             {medlem.interesser.map((i, idx) => <li key={idx}>{i}</li>)}
           </ul>
         </div>
       </div>
 
-      <h3 className="text-xl font-bold mb-2">Arbeidslogg</h3>
-      <table className="w-full border text-sm">
+      <h3>Arbeidslogg</h3>
+      <table>
         <thead>
-          <tr className="bg-gray-100">
-            <th className="p-2 border">Dato</th>
-            <th className="p-2 border">Beskrivelse</th>
-            <th className="p-2 border">Timer</th>
+          <tr>
+            <th>Dato</th>
+            <th>Beskrivelse</th>
+            <th>Timer</th>
           </tr>
         </thead>
         <tbody>
           {medlem.arbeidslogg?.map((logg, idx) => (
             <tr key={idx}>
-              <td className="p-2 border">{logg.dato}</td>
-              <td className="p-2 border">{logg.beskrivelse}</td>
-              <td className="p-2 border">{logg.timer} t</td>
+              <td>{logg.dato}</td>
+              <td>{logg.beskrivelse}</td>
+              <td>{logg.timer} t</td>
             </tr>
           ))}
         </tbody>
