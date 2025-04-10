@@ -47,7 +47,7 @@ export default function Home() {
           <tbody>
             {arbeidslogg.map((logg, i) => (
               <tr key={i}>
-                <td>{logg.dato}</td>
+                <td>{logg.dato?.slice(0, 10)}</td>
                 <td>{logg.navn}</td>
                 <td>{logg.beskrivelse}</td>
                 <td>{logg.timer} timer</td>

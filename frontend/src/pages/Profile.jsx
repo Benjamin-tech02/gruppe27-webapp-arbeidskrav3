@@ -34,7 +34,7 @@ export default function Profile() {
           <tbody>
             {medlem.arbeidslogg?.map((logg, idx) => (
               <tr key={idx}>
-                <td>{logg.dato}</td>
+                <td>{logg.dato?.slice(0, 10)}</td>
                 <td>{logg.beskrivelse}</td>
                 <td>{logg.timer} timer</td>
               </tr>

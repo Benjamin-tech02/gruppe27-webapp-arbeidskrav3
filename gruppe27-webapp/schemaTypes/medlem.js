@@ -21,9 +21,9 @@ export default {
           {
             type: 'object',
             fields: [
-              { name: 'dato', title: 'Dato', type: 'date' },
+              { name: 'dato', title: 'Dato', type: 'datetime' },
               { name: 'beskrivelse', title: 'Beskrivelse', type: 'string' },
-              { name: 'timer', title: 'Timer', type: 'number' }
+              { name: 'timer', title: 'Timer', type: 'number' },
             ]
           }
         ]

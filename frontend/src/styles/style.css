@@ -44,6 +44,7 @@ main h2{
 .profilkort{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .profilkort a {
@@ -104,8 +105,8 @@ section{
 }
 
 section img {
-    width: 35rem;
-    height: 25rem;
+    width: 27rem;
+    height: 23rem;
 }
 
 #profil-overskrift {
