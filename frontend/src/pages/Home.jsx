@@ -34,34 +34,28 @@ export default function Home() {
 
   return (
     <main>
-      <h2>Gruppemedlemmer</h2>
-      <div>
+      <h2 id="overskrivt-gruppe">Gruppemedlemmer</h2>
+      <div className="profilkort">
         {medlemmer.map(m => (
           <ProfileCard key={m._id} medlem={m} />
         ))}
       </div>
 
-      <h2>Arbeidslogg</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Dato</th>
-            <th>Navn</th>
-            <th>Beskrivelse</th>
-            <th>Tid brukt</th>
-          </tr>
-        </thead>
-        <tbody>
-          {arbeidslogg.map((logg, i) => (
-            <tr key={i}>
-              <td>{logg.dato}</td>
-              <td>{logg.navn}</td>
-              <td>{logg.beskrivelse}</td>
-              <td>{logg.timer} timer</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <h2 id="tabellnavn">Arbeidslogg</h2>
+      <div className="arbeidslogg-wrapper">
+        <table className="arbeidslogg-tabell">
+          <tbody>
+            {arbeidslogg.map((logg, i) => (
+              <tr key={i}>
+                <td>{logg.dato}</td>
+                <td>{logg.navn}</td>
+                <td>{logg.beskrivelse}</td>
+                <td>{logg.timer} timer</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </main>
   )
 }

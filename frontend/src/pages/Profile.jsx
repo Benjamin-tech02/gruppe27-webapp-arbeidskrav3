@@ -16,37 +16,32 @@ export default function Profile() {
 
   return (
     <main>
-      <div>
+      <section>
         <img src={medlem.bilde} alt={medlem.navn} />
-        <div>
+        <article>
           <h2>{medlem.navn}</h2>
           <p>{medlem.bio}</p>
           <h3>Interesser</h3>
           <ul>
             {medlem.interesser.map((i, idx) => <li key={idx}>{i}</li>)}
           </ul>
-        </div>
-      </div>
+        </article>
+      </section>
 
-      <h3>Arbeidslogg</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Dato</th>
-            <th>Beskrivelse</th>
-            <th>Timer</th>
-          </tr>
-        </thead>
-        <tbody>
-          {medlem.arbeidslogg?.map((logg, idx) => (
-            <tr key={idx}>
-              <td>{logg.dato}</td>
-              <td>{logg.beskrivelse}</td>
-              <td>{logg.timer} t</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <h3 id="profil-overskrift">Arbeidslogg</h3>
+      <div className="arbeidslogg-wrapper">
+        <table className="arbeidslogg-tabell">
+          <tbody>
+            {medlem.arbeidslogg?.map((logg, idx) => (
+              <tr key={idx}>
+                <td>{logg.dato}</td>
+                <td>{logg.beskrivelse}</td>
+                <td>{logg.timer} timer</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </main>
   )
 }
