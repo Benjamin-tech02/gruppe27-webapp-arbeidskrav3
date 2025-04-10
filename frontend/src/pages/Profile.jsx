@@ -18,7 +18,7 @@ export default function Profile() {
     <main>
       <section>
         <img src={medlem.bilde} alt={medlem.navn} />
-        <article>
+        <article id="profil-tekst">
           <h2>{medlem.navn}</h2>
           <p>{medlem.bio}</p>
           <h3>Interesser</h3>
